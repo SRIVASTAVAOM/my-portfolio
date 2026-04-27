@@ -3,7 +3,8 @@ import "./index.css";
 import portfolioData from "./data/portfolioData";
 
 function App() {
-  const [darkMode, setDarkMode] = useState(true);
+  // Default = Light Mode
+  const [darkMode, setDarkMode] = useState(false);
 
   useEffect(() => {
     if (darkMode) {
@@ -22,11 +23,11 @@ function App() {
         <ul className="nav-links">
           <li><a href="#home">Home</a></li>
           <li><a href="#about">About</a></li>
+          <li><a href="#projects">Projects</a></li>
           <li><a href="#skills">Skills</a></li>
           <li><a href="#contact">Contact</a></li>
         </ul>
 
-        {/* Theme Toggle Button */}
         <button
           className="theme-toggle"
           onClick={() => setDarkMode(!darkMode)}
@@ -36,7 +37,7 @@ function App() {
       </nav>
 
       <main>
-        {/* Hero Section */}
+        {/* Hero */}
         <section id="home" className="hero">
           <div className="hero-content">
             <p className="intro">Hello, I'm</p>
@@ -48,7 +49,7 @@ function App() {
             <p className="tagline">{portfolioData.tagline}</p>
 
             <div className="hero-buttons">
-              <a href="#skills" className="primary-btn">
+              <a href="#projects" className="primary-btn">
                 View My Work
               </a>
 
@@ -73,6 +74,19 @@ function App() {
           <p>{portfolioData.about}</p>
         </section>
 
+        {/* Projects */}
+        <section id="projects" className="section">
+          <h3>Projects</h3>
+
+          {portfolioData.projects.map((project, index) => (
+            <div key={index} className="project-card">
+              <h4>{project.title}</h4>
+              <p>{project.tech}</p>
+              <p>{project.description}</p>
+            </div>
+          ))}
+        </section>
+
         {/* Skills */}
         <section id="skills" className="section">
           <h3>Skills</h3>
@@ -84,46 +98,41 @@ function App() {
             </div>
           ))}
         </section>
-        <section id="contact" className="section">
-  <h3>Contact Me</h3>
-
-  <form
-    className="contact-form"
-    action="https://formspree.io/f/YOUR_FORM_ID"
-    method="POST"
-  >
-    <input
-      type="text"
-      name="name"
-      placeholder="Your Name"
-      required
-    />
-
-    <input
-      type="email"
-      name="email"
-      placeholder="Your Email"
-      required
-    />
-
-    <textarea
-      name="message"
-      rows="6"
-      placeholder="Your Message"
-      required
-    ></textarea>
-
-    <button type="submit" className="primary-btn">
-      Send Message
-    </button>
-  </form>
-</section>
 
         {/* Contact */}
         <section id="contact" className="section">
-          <h3>Contact</h3>
-          <p>Email: {portfolioData.email}</p>
-          <p>Location: {portfolioData.location}</p>
+          <h3>Contact Me</h3>
+
+          <form
+            className="contact-form"
+            action="https://formspree.io/f/mykladno"
+            method="POST"
+          >
+            <input
+              type="text"
+              name="name"
+              placeholder="Your Name"
+              required
+            />
+
+            <input
+              type="email"
+              name="email"
+              placeholder="Your Email"
+              required
+            />
+
+            <textarea
+              name="message"
+              rows="6"
+              placeholder="Your Message"
+              required
+            ></textarea>
+
+            <button type="submit" className="primary-btn">
+              Send Message
+            </button>
+          </form>
 
           <div className="social-links">
             <a
@@ -143,7 +152,34 @@ function App() {
             </a>
           </div>
         </section>
-        
+
+        <footer className="footer">
+  <h3>{portfolioData.name}</h3>
+
+  <p>Software Developer | Full Stack & Cloud Enthusiast</p>
+
+  <div className="footer-links">
+    <a
+      href={portfolioData.github}
+      target="_blank"
+      rel="noreferrer"
+    >
+      GitHub
+    </a>
+
+    <a
+      href={portfolioData.linkedin}
+      target="_blank"
+      rel="noreferrer"
+    >
+      LinkedIn
+    </a>
+  </div>
+
+  <p className="copyright">
+    © 2026 Om Kumar. All Rights Reserved.
+  </p>
+</footer>
       </main>
     </>
   );

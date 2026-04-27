@@ -1,7 +1,7 @@
 const portfolioData = {
   name: "Om Kumar",
 
-  title: "Software Developer | Full Stack & Cloud Enthist",
+  title: "Software Developer | Full Stack & Cloud Enthusiast",
 
   tagline:
     "Building scalable apps with clean code, modern UI, and real-world impact.",
@@ -25,11 +25,39 @@ const portfolioData = {
     "Software Developer with experience in building full-stack and Android applications using Kotlin, React, Node.js, and Firebase. Strong in Data Structures, REST APIs, and cloud fundamentals (AWS). Passionate about developing scalable, user-focused solutions and continuously learning modern technologies.",
 
   skills: {
-    Frontend: ["React.js", "HTML", "CSS", "JavaScript", "Redux"],
-    Backend: ["Node.js", "Express.js", "REST APIs"],
-    Database: ["MongoDB", "MySQL", "Firebase"],
-    Tools: ["AWS", "Git", "Cloudinary", "npm"],
-    Programming: ["C++", "Python", "C", "Kotlin"]
+    Frontend: [
+      "React.js",
+      "HTML",
+      "CSS",
+      "JavaScript",
+      "Redux"
+    ],
+
+    Backend: [
+      "Node.js",
+      "Express.js",
+      "REST APIs"
+    ],
+
+    Database: [
+      "MongoDB",
+      "MySQL",
+      "Firebase"
+    ],
+
+    Tools: [
+      "AWS",
+      "Git",
+      "Cloudinary",
+      "npm"
+    ],
+
+    Programming: [
+      "C++",
+      "Python",
+      "C",
+      "Kotlin"
+    ]
   },
 
   experience: [
@@ -61,21 +89,21 @@ const portfolioData = {
       title: "Twitter Clone",
       tech: "React • Node.js • MongoDB • Firebase",
       description:
-        "A complete social media web app with authentication, APIs and responsive design."
+        "A complete social media web app with authentication, APIs, secure login, and responsive design."
     },
 
     {
       title: "QR Code Generator",
       tech: "Node.js • Express.js",
       description:
-        "Backend system to generate fast and reliable QR codes from user-provided URLs."
+        "Backend system to generate fast, reliable, and scannable QR codes from user-provided URLs."
     },
 
     {
       title: "GreenTrack App",
       tech: "Kotlin • Android Studio",
       description:
-        "Android app focused on sustainable waste collection and eco-friendly practices."
+        "Android app focused on sustainable waste collection and eco-friendly practices with better user interaction."
     }
   ]
 };
